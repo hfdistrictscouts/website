@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Hatfield Forest District Scouts Website",
+  "main": "index.js",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfdistrictscouts/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hfdistrictscouts/website/issues"
+  },
+  "homepage": "https://github.com/hfdistrictscouts/website#readme",
+  "dependencies": {
+    "scoutstrap": "^0.1.1"
+  }
+}
