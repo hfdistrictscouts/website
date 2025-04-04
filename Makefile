@@ -4,7 +4,7 @@ build:
 	cp node_modules/popper.js/dist/umd/popper.min.js dist/js/
 	cp node_modules/scoutstrap/dist/css/scoutstrap.min.css dist/css/
 	cp node_modules/js-yaml/dist/js-yaml.min.js dist/js/
-	cp -pR *.html assets dist/
+	cp -pR *.html js assets dist/
 
 all:
 	$(MAKE) prep

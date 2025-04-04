@@ -335,40 +335,11 @@
             <div class="container mx-auto px-4">
 		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Latest News</h2>
 		
-		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
-			<img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Scouts camping" class="w-full h-48 object-cover">
-			<div class="p-6">
-                            <div class="text-purple-600 text-sm font-semibold mb-2">12 SEP 2023</div>
-                            <h3 class="text-xl font-bold mb-3">Summer Camp Success</h3>
-                            <p class="mb-4">Our scouts had an amazing time at the summer camp, earning badges and making memories.</p>
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Read more →</a>
-			</div>
-                    </div>
-                    
-                    <div class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
-			<img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1605&q=80" alt="Scouts doing community service" class="w-full h-48 object-cover">
-			<div class="p-6">
-                            <div class="text-purple-600 text-sm font-semibold mb-2">25 AUG 2023</div>
-                            <h3 class="text-xl font-bold mb-3">Community Clean-Up Day</h3>
-                            <p class="mb-4">Our beavers and cubs helped clean up the local park, earning their community challenge badges.</p>
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Read more →</a>
-			</div>
-                    </div>
-                    
-                    <div class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
-			<img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1705&q=80" alt="New scout leaders" class="w-full h-48 object-cover">
-			<div class="p-6">
-                            <div class="text-purple-600 text-sm font-semibold mb-2">5 AUG 2023</div>
-                            <h3 class="text-xl font-bold mb-3">Welcome New Leaders</h3>
-                            <p class="mb-4">We're delighted to welcome three new leaders to our district team.</p>
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Read more →</a>
-			</div>
-                    </div>
+		<div id="featuredNews" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 		</div>
 		
 		<div class="text-center mt-10">
-                    <a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition">View All News</a>
+                    <a href="/news/" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition">View All News</a>
 		</div>
             </div>
 	</section>
@@ -579,25 +550,9 @@
 	     document.location.href="https://" + document.location.hostname + document.location.pathname;
 	 }
 
-	 fetch('/assets/events.yml')
-	     .then(body => body.text())
-	     .then(text => {
-		 let doc = jsyaml.load(text);
-		 console.log(doc);
-		 doc.forEach(item => {
-		     let div=document.createElement('div');
-		     div.className="bg-white p-6 rounded-lg shadow-md";
-		     let content = `
-  <div class="text-purple-600 text-sm font-semibold mb-2">${item.date}</div>
-    <h3 class="text-xl font-bold mb-3">${item.title || 'Untitled Event'}</h3>
-    <p class="mb-4">${item.text}</p>
-    ${item.link ? `<a href="${item.link}" class="text-purple-600 hover:text-purple-800 font-medium">More info →</a>` : ''}
-  </div>
-	 `
-		     div.innerHTML = content;
-		     document.getElementById('featuredEvents').appendChild(div);
-		 });
-	     });
+	 
 	</script>
+	<script src="/js/events.js"></script>
+	<script src="/js/news.js"></script>
     </body>
 </html>
