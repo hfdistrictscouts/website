@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hatfield Forest District Scouts</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="/js/js-yaml.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<style>
@@ -324,25 +325,7 @@
 		</div>
 		
 		<!-- Featured Events -->
-		<div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-			<div class="text-purple-600 text-sm font-semibold mb-2">15 OCT 2023</div>
-			<h3 class="text-xl font-bold mb-3">District Camp</h3>
-			<p class="mb-4">Join us for our annual district camping weekend at Hatfield Forest.</p>
-			<a href="#" class="text-purple-600 hover:text-purple-800 font-medium">More info →</a>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-			<div class="text-purple-600 text-sm font-semibold mb-2">5 NOV 2023</div>
-			<h3 class="text-xl font-bold mb-3">Remembrance Parade</h3>
-			<p class="mb-4">All groups will participate in the annual remembrance service.</p>
-			<a href="#" class="text-purple-600 hover:text-purple-800 font-medium">More info →</a>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-			<div class="text-purple-600 text-sm font-semibold mb-2">10 DEC 2023</div>
-			<h3 class="text-xl font-bold mb-3">Christmas Jamboree</h3>
-			<p class="mb-4">Festive fun for all sections with games, crafts and carols.</p>
-			<a href="#" class="text-purple-600 hover:text-purple-800 font-medium">More info →</a>
-                    </div>
+		<div id="featuredEvents" class="grid md:grid-cols-3 gap-6">
 		</div>
             </div>
 	</section>
@@ -594,6 +577,25 @@
 	     document.location.href="https://" + document.location.hostname + document.location.pathname;
 	 }
 
+	 fetch('/assets/events.yml')
+	     .then(body => body.text())
+	     .then(text => {
+		 let doc = jsyaml.load(text);
+		 console.log(doc);
+		 doc.forEach(item => {
+		     let div=document.createElement('div');
+		     div.className="bg-white p-6 rounded-lg shadow-md";
+		     let content = `
+  <div class="text-purple-600 text-sm font-semibold mb-2">${item.date}</div>
+    <h3 class="text-xl font-bold mb-3">${item.title || 'Untitled Event'}</h3>
+    <p class="mb-4">${item.text}</p>
+    ${item.link ? `<a href="${item.link}" class="text-purple-600 hover:text-purple-800 font-medium">More info →</a>` : ''}
+  </div>
+	 `
+		     div.innerHTML = content;
+		     document.getElementById('featuredEvents').appendChild(div);
+		 });
+	     });
 	</script>
     </body>
 </html>
