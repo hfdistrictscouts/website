@@ -124,3 +124,13 @@
     height: 100px;
     object-fit: contain;
 }
+
+nav div.absolute {
+    margin-top:0;
+}
+
+.bg-white {
+    textarea, input, checkbox, select {
+	background: #fff;
+    }
+}
