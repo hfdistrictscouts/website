@@ -2,7 +2,6 @@ fetch('/assets/events.yml')
     .then(body => body.text())
     .then(text => {
 	let doc = jsyaml.load(text);
-	console.log(doc);
 	doc.forEach(item => {
 	    let div=document.createElement('div');
 	    div.className="bg-white p-6 rounded-lg shadow-md";

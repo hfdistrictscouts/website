@@ -2,7 +2,6 @@ fetch('/assets/news.yml')
     .then(body => body.text())
     .then(text => {
 	let doc = jsyaml.load(text);
-	console.log(doc);
 	doc.forEach(item => {
 	    let div=document.createElement('div');
 	    div.className="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100";

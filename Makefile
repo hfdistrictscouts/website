@@ -5,6 +5,7 @@ build:
 	cp node_modules/scoutstrap/dist/js/bootstrap.bundle.min.js dist/js/
 	cp node_modules/popper.js/dist/umd/popper.min.js dist/js/
 	cp node_modules/scoutstrap/dist/css/scoutstrap.min.css dist/css/
+	cp node_modules/jquery/dist/jquery.min.js dist/js/
 	cp node_modules/js-yaml/dist/js-yaml.min.js dist/js/
 	cp node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js dist/js/
 	cp -pR node_modules/\@fortawesome/fontawesome-free/webfonts dist/
