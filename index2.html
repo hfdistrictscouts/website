@@ -34,17 +34,18 @@
                             Groups <i class="fas fa-chevron-down ml-1 text-xs"></i>
 			</button>
 			<div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
-                            <a href="#birchanger" class="block px-4 py-2 hover:bg-purple-100">Birchanger</a>
-                            <a href="#stansted" class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stansted</a>
-                            <a href="#henham" class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Henham &amp; Elsenham</a>
-                            <a href="#hallingbury" class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Hallingbury</a>
-                            <a href="#dunmow" class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Dunmow</a>
-                            <a href="#takeley" class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Takeley</a>
-                            <a href="#stebbing" class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stebbing</a>
+                            <a href="#birchanger"   class="block px-4 py-2 hover:bg-purple-100">Birchanger</a>
+                            <a href="#stansted"     class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stansted</a>
+                            <a href="#henham"       class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Henham &amp; Elsenham</a>
+                            <a href="#hallingbury"  class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Hallingbury</a>
+                            <a href="#dunmow"       class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Dunmow</a>
+                            <a href="#takeley"      class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Takeley</a>
+                            <a href="#stebbing"     class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stebbing</a>
+                            <a href="#centurionesu" class="block px-4 py-2 hover:bg-purple-100">Centurion ESU</a>
 			</div>
                     </div>
-                    <a href="#events" class="hover:text-yellow-300 transition">Events</a>
-                    <a href="#news" class="hover:text-yellow-300 transition">News</a>
+                    <a href="#events"  class="hover:text-yellow-300 transition">Events</a>
+                    <a href="#news"    class="hover:text-yellow-300 transition">News</a>
                     <a href="#gallery" class="hover:text-yellow-300 transition">Gallery</a>
                     <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
 		</nav>
@@ -64,13 +65,14 @@
                             Groups <i class="fas fa-chevron-down ml-1 text-xs"></i>
 			</button>
 			<div id="groups-menu" class="pl-4 hidden">
-                            <a href="#birchanger" class="block py-2 hover:text-yellow-300 transition">Birchanger</a>
-                            <a href="#stansted" class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stansted</a>
-                            <a href="#henham" class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Henham &amp; Elsenham</a>
-                            <a href="#hallingbury" class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Hallingbury</a>
-                            <a href="#dunmow" class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Dunmow</a>
-                            <a href="#takeley" class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Takeley</a>
-                            <a href="#stebbing" class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stebbing</a>
+                            <a href="#birchanger"   class="block py-2 hover:text-yellow-300 transition">Birchanger</a>
+                            <a href="#stansted"     class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stansted</a>
+                            <a href="#henham"       class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Henham &amp; Elsenham</a>
+                            <a href="#hallingbury"  class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Hallingbury</a>
+                            <a href="#dunmow"       class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Dunmow</a>
+                            <a href="#takeley"      class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Takeley</a>
+                            <a href="#stebbing"     class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stebbing</a>
+                            <a href="#centurionesu" class="block py-2 hover:text-yellow-300 transition">Centurion ESU</a>
 			</div>
                     </div>
                     <a href="#events" class="block py-2 hover:text-yellow-300 transition">Events</a>
@@ -186,7 +188,6 @@
 		</div>
 		
 		<!-- Other groups would follow the same pattern -->
-		<!-- For brevity, I've included placeholders for the remaining groups -->
 		<div class="grid md:grid-cols-2 gap-6">
                     <!-- 1st Henham & Elsenham -->
                     <div id="henham" class="bg-gray-50 p-6 rounded-lg shadow-md">
@@ -440,6 +441,7 @@
                                     <option value="dunmow">1<sup>st</sup> Dunmow</option>
                                     <option value="takeley">1<sup>st</sup> Takeley</option>
                                     <option value="stebbing">1<sup>st</sup> Stebbing</option>
+                                    <option value="centurionesu">Centurion ESU</option>
 				</select>
                             </div>
                             <div>
@@ -536,10 +538,10 @@
                  if (targetId === '#') return;
                  
                  const targetElement = document.querySelector(targetId);
+		 
                  if (targetElement) {
-                     targetElement.scrollIntoView({
-                         behavior: 'smooth'
-                     });
+		     let offset = $(targetId).offset().top - $('header').height();
+		     window.scrollTo({top: offset, behaviour: 'smooth'});
                      
                      // Close mobile menu if open
                      if (mobileMenu.classList.contains('open')) {
