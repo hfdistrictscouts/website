@@ -1,7 +1,12 @@
 fetch('/assets/news.yml')
     .then(body => body.text())
     .then(text => {
-	let doc = jsyaml.load(text);
+	const featuredNews = document.getElementById('featuredNews');
+	if(!featuredNews) {
+	    return;
+	}
+	const doc = jsyaml.load(text);
+	
 	doc.forEach(item => {
 	    let div=document.createElement('div');
 	    div.className="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100";
@@ -16,6 +21,6 @@ fetch('/assets/news.yml')
   ${item.link ? `<a href="${item.link}" class="text-purple-600 hover:text-purple-800 font-medium">Read more →</a>` : ''}
 </div>`;
 	    div.innerHTML = content;
-	    document.getElementById('featuredNews').appendChild(div);
+	    featuredNews.appendChild(div);
 	});
     });

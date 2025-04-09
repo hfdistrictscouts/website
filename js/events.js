@@ -1,7 +1,11 @@
 fetch('/assets/events.yml')
     .then(body => body.text())
     .then(text => {
-	let doc = jsyaml.load(text);
+	const featuredEvents = document.getElementById('featuredEvents');
+	if(!featuredEvents) {
+	    return;
+	}
+	const doc = jsyaml.load(text);
 	doc.forEach(item => {
 	    let div=document.createElement('div');
 	    div.className="bg-white p-6 rounded-lg shadow-md";
@@ -13,6 +17,6 @@ fetch('/assets/events.yml')
   </div>
 	 `;
 	    div.innerHTML = content;
-	    document.getElementById('featuredEvents').appendChild(div);
+	    featuredEvents.appendChild(div);
 	});
     });

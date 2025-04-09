@@ -1,43 +1,623 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-	<title>Hatfield Forest District Scouts</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- CSS -->
-	<link rel="stylesheet" href="/css/scoutstrap.min.css" integrity="sha384-5Kguc7IDQdynmm22yUyn9psYyP8LQhAWCCKJT/RrZJAWqdUAw5eADwc25JoYsXH6" crossorigin="anonymous">
-
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
-
-	<!-- Javascript (optional, but required for some components) -->
-	<script src="/js/bootstrap.bundle.min.js" integrity="sha384-RWMrygDG4kZTKx0uGke0ezaQacpT+TYFYL62nJJ6kpjUYyLxYQ3Vm1QegY1lv6jl" crossorigin="anonymous"></script>
-	<script src="/js/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script>
-	    if(document.location.protocol != "https:" && document.location.hostname != "localhost") {
-		document.location.href="https://" + document.location.hostname + document.location.pathname;
-	    }
-	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hatfield Forest District Scouts</title>
+	<meta name="description" content="Hatfield Forest District Scouts" />
+        <meta name="author" content="rmp@psyphi.net" />
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/js-yaml.min.js"></script>
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/icons/ipad-retina.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/icons/iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/icons/ipad.png" />
+	<link rel="apple-touch-icon" href="/icons/iphone.png" />
     </head>
-    <body>
-	<header class="navbar navbar-expand navbar-light">
-	    <nav class="container-xl" aria-label="Main navigation">
-		<a class="navbar-brand" style="margin-right: 0rem;" href="/" aria-label="Hatfield Forest District Scouts">
-		    <h4 style="font-weight:800; margin-bottom: 2px;">
-			<svg class="svg-icon icon-med icon-primary" viewBox="0 0 20 20"><path d="M5.38,9.11a6.13,6.13,0,0,1,.91,2.43h1a7,7,0,0,0-1.07-3,3.6,3.6,0,0,0-3-1.86h0A2.93,2.93,0,0,0,.91,7.81,3,3,0,0,0,.3,10.39l1-.21a2.1,2.1,0,0,1,.42-1.76A1.92,1.92,0,0,1,3.2,7.7h0A2.73,2.73,0,0,1,5.38,9.11Z"></path><path d="M12.57,16a4.71,4.71,0,0,1-.79-1.78h-1a5.55,5.55,0,0,0,.82,2.1A4.18,4.18,0,0,1,10,17.77h0a4.17,4.17,0,0,1-1.59-1.45,5.55,5.55,0,0,0,.82-2.1h-1A4.71,4.71,0,0,1,7.44,16l-.17.23.12.26A5,5,0,0,0,9.8,18.77l.2.09h0l.2-.09a5,5,0,0,0,2.41-2.27l.12-.26Z"></path><path d="M14.62,9.11a6.13,6.13,0,0,0-.91,2.43h-1a7,7,0,0,1,1.07-3,3.6,3.6,0,0,1,3-1.86h0a2.93,2.93,0,0,1,2.28,1.09,3,3,0,0,1,.61,2.59l-1-.21a2.1,2.1,0,0,0-.42-1.76A1.92,1.92,0,0,0,16.8,7.7h0A2.73,2.73,0,0,0,14.62,9.11Z"></path><path d="M8.27,11.54h1a9.86,9.86,0,0,0-1-3A6.35,6.35,0,0,1,7.52,6,3.38,3.38,0,0,1,9,3.39c.16-.12.61-.46,1-.83.41.37.86.71,1,.83A3.38,3.38,0,0,1,12.48,6a6.36,6.36,0,0,1-.77,2.54,9.85,9.85,0,0,0-1,3h1a9.27,9.27,0,0,1,.88-2.61A7.06,7.06,0,0,0,13.46,6a4.37,4.37,0,0,0-1.86-3.37,11.42,11.42,0,0,1-1.25-1.07L10,1.15l-.36.39A11.41,11.41,0,0,1,8.39,2.61,4.37,4.37,0,0,0,6.54,6a7.06,7.06,0,0,0,.86,2.95A9.27,9.27,0,0,1,8.27,11.54Z"></path><rect x="4.35" y="12.41" width="11.3" height="0.94"></rect></svg> Hatfield Forest District Scouts</h4>
-		</a>
-
-		<!-- div class="navbar-nav-scroll flex-grow-1 ml-lg-5 ml-md-3 ml-sm-2">
-		    <ul class="navbar-nav bd-navbar-nav flex-row">
-			<li class="nav-item">
-			    <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
-			</li>
-		    </ul>
-		</div-->
-
-		<!--a class="btn btn-outline-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/0.1/getting-started/download/">Download</a -->
-	    </nav>
+    <body class="bg-white">
+	<span id="home"></span>
+	<!-- Header with Navigation -->
+	<header class="scout-purple text-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+		<div class="flex items-center space-x-2">
+                    <svg class="h-12 w-12 fill-white" viewbox="0 0 20 20"><path d="M5.38,9.11a6.13,6.13,0,0,1,.91,2.43h1a7,7,0,0,0-1.07-3,3.6,3.6,0,0,0-3-1.86h0A2.93,2.93,0,0,0,.91,7.81,3,3,0,0,0,.3,10.39l1-.21a2.1,2.1,0,0,1,.42-1.76A1.92,1.92,0,0,1,3.2,7.7h0A2.73,2.73,0,0,1,5.38,9.11Z"></path><path d="M12.57,16a4.71,4.71,0,0,1-.79-1.78h-1a5.55,5.55,0,0,0,.82,2.1A4.18,4.18,0,0,1,10,17.77h0a4.17,4.17,0,0,1-1.59-1.45,5.55,5.55,0,0,0,.82-2.1h-1A4.71,4.71,0,0,1,7.44,16l-.17.23.12.26A5,5,0,0,0,9.8,18.77l.2.09h0l.2-.09a5,5,0,0,0,2.41-2.27l.12-.26Z"></path><path d="M14.62,9.11a6.13,6.13,0,0,0-.91,2.43h-1a7,7,0,0,1,1.07-3,3.6,3.6,0,0,1,3-1.86h0a2.93,2.93,0,0,1,2.28,1.09,3,3,0,0,1,.61,2.59l-1-.21a2.1,2.1,0,0,0-.42-1.76A1.92,1.92,0,0,0,16.8,7.7h0A2.73,2.73,0,0,0,14.62,9.11Z"></path><path d="M8.27,11.54h1a9.86,9.86,0,0,0-1-3A6.35,6.35,0,0,1,7.52,6,3.38,3.38,0,0,1,9,3.39c.16-.12.61-.46,1-.83.41.37.86.71,1,.83A3.38,3.38,0,0,1,12.48,6a6.36,6.36,0,0,1-.77,2.54,9.85,9.85,0,0,0-1,3h1a9.27,9.27,0,0,1,.88-2.61A7.06,7.06,0,0,0,13.46,6a4.37,4.37,0,0,0-1.86-3.37,11.42,11.42,0,0,1-1.25-1.07L10,1.15l-.36.39A11.41,11.41,0,0,1,8.39,2.61,4.37,4.37,0,0,0,6.54,6a7.06,7.06,0,0,0,.86,2.95A9.27,9.27,0,0,1,8.27,11.54Z"></path><rect x="4.35" y="12.41" width="11.3" height="0.94"></rect></svg>
+                    <h1 class="text-xl font-bold hidden md:block">
+			
+			Hatfield Forest District Scouts</h1>
+		</div>
+		
+		<!-- Desktop Navigation -->
+		<nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                    <div class="relative group">
+			<button class="hover:text-yellow-300 transition flex items-center">
+                            Groups <i class="fas fa-chevron-down ml-1 text-xs"></i>
+			</button>
+			<div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                            <a href="#birchanger"   class="block px-4 py-2 hover:bg-purple-100">Birchanger</a>
+                            <a href="#stansted"     class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stansted</a>
+                            <a href="#henham"       class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Henham &amp; Elsenham</a>
+                            <a href="#hallingbury"  class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Hallingbury</a>
+                            <a href="#dunmow"       class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Dunmow</a>
+                            <a href="#takeley"      class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Takeley</a>
+                            <a href="#stebbing"     class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stebbing</a>
+                            <a href="#centurionesu" class="block px-4 py-2 hover:bg-purple-100">Centurion ESU</a>
+			</div>
+                    </div>
+                    <a href="#events"  class="hover:text-yellow-300 transition">Events</a>
+                    <!-- a href="#news"    class="hover:text-yellow-300 transition">News</a-->
+                    <!-- a href="#gallery" class="hover:text-yellow-300 transition">Gallery</a-->
+                    <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+		</nav>
+		
+		<!-- Mobile Menu Button -->
+		<button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+		</button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu scout-purple md:hidden">
+		<div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                    <a href="#home" class="block py-2 hover:text-yellow-300 transition">Home</a>
+                    <div>
+			<button id="groups-toggle" class="w-full text-left py-2 flex justify-between items-center">
+                            Groups <i class="fas fa-chevron-down ml-1 text-xs"></i>
+			</button>
+			<div id="groups-menu" class="pl-4 hidden">
+                            <a href="#birchanger"   class="block py-2 hover:text-yellow-300 transition">Birchanger</a>
+                            <a href="#stansted"     class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stansted</a>
+                            <a href="#henham"       class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Henham &amp; Elsenham</a>
+                            <a href="#hallingbury"  class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Hallingbury</a>
+                            <a href="#dunmow"       class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Dunmow</a>
+                            <a href="#takeley"      class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Takeley</a>
+                            <a href="#stebbing"     class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stebbing</a>
+                            <a href="#centurionesu" class="block py-2 hover:text-yellow-300 transition">Centurion ESU</a>
+			</div>
+                    </div>
+                    <a href="#events" class="block py-2 hover:text-yellow-300 transition">Events</a>
+                    <a href="#news" class="block py-2 hover:text-yellow-300 transition">News</a>
+                    <a href="#gallery" class="block py-2 hover:text-yellow-300 transition">Gallery</a>
+                    <a href="#contact" class="block py-2 hover:text-yellow-300 transition">Contact</a>
+		</div>
+            </div>
 	</header>
 
+	<!-- Hero Section -->
+	<section id="hero" class="flex items-center justify-center">
+	    <video id="herovid" playsinline autoplay muted loop id="bgvid">
+		<source src="/assets/thisisscouts.webm" type="video/webm"/>
+		<source src="/assets/thisisscouts.mp4" type="video/mp4"/>
+	    </video>
+            <div class="text-center px-4">
+		<h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Adventure. Skills. For Life.</h1>
+		<p class="text-xl md:text-2xl text-white mb-8">Join the Hatfield Forest District Scouts today</p>
+		<a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full transition">Find a Group</a>
+            </div>
+	</section>
+
+	<!-- About Section -->
+	<section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Welcome to Hatfield Forest District Scouts</h2>
+		<div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+			<div class="text-5xl scout-purple-text mb-4">
+                            <i class="fas fa-compass"></i>
+			</div>
+			<h3 class="text-xl font-bold mb-3">Adventure</h3>
+			<p>We offer exciting outdoor activities that challenge young people and help them develop new skills.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+			<div class="text-5xl scout-purple-text mb-4">
+                            <i class="fas fa-users"></i>
+			</div>
+			<h3 class="text-xl font-bold mb-3">Community</h3>
+			<p>Join a supportive community where young people make friends and learn teamwork.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+			<div class="text-5xl scout-purple-text mb-4">
+                            <i class="fas fa-star"></i>
+			</div>
+			<h3 class="text-xl font-bold mb-3">Skills for Life</h3>
+			<p>Our programme helps young people develop confidence, resilience and leadership skills.</p>
+                    </div>
+		</div>
+            </div>
+	</section>
+
+	<!-- Groups Section -->
+	<section id="groups" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Our Scout Groups</h2>
+		
+		<!-- Birchanger -->
+		<div id="birchanger" class="mb-16">
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg overflow-hidden shadow-md">
+			<div class="md:w-1/3 p-6 flex justify-center">
+                            <img src="/assets/img/fleur128x128.png" alt="Birchanger Scouts" class="group-logo rounded-full border-4 border-purple-500">
+			</div>
+			<div class="md:w-2/3 p-6">
+                            <h3 class="text-2xl font-bold mb-3 scout-purple-text">Birchanger Headquarters</h3>
+                            <p class="mb-4">
+				Our District Headquarters sits in the quiet village of Birchanger on the western edge of Hatfield Forest District, bordering Bishop's Stortford. Whilst there is currently no active scout group meeting at the hall, it is actively used by the support team for training and events, and the facilities there are available for wider use.
+			    </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Support</span>
+				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Leader Training</span>
+                            </div>
+                            <!--a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">Learn More</a-->
+			</div>
+                    </div>
+		</div>
+		
+		<!-- 1st Stansted -->
+		<div id="stansted" class="mb-16">
+                    <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-lg overflow-hidden shadow-md">
+			<div class="md:w-1/3 p-6 flex justify-center">
+                            <img src="/assets/img/fleur128x128.png" alt="1st Stansted Scouts" class="group-logo rounded-full border-4 border-purple-500">
+			</div>
+			<div class="md:w-2/3 p-6">
+                            <h3 class="text-2xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Stansted Scout Group</h3>
+                            <p class="mb-4">Water Lane, Stansted Mountfitchet, Essex, CM24 8BJ</p>
+			    <p class="mb-4">One of the largest groups in the district, meeting at the Stansted Scout Hut.</p>
+			    <p class="mb-4">
+				<b>Beavers</b>
+				<br/>
+				Saturday 0915-1030
+			    </p>
+			    <p class="mb-4">
+				<b>Cubs</b>
+				<br/>
+				Tuesday 1900-2030, during term
+				<br/>
+				Thursday 1900-2030, during term
+			    </p>
+			    <p class="mb-4">
+				<b>Scouts</b>
+				<br/>
+				Monday 1930-2130, during term
+			    </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beavers (6-8)</span>
+				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
+                            </div>
+                            <!-- a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">Learn More</a-->
+			</div>
+                    </div>
+		</div>
+		
+		<div class="grid md:grid-cols-2 gap-6">
+                    <!-- 1st Henham & Elsenham -->
+                    <div id="henham" class="bg-gray-50 p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Henham &amp; Elsenham Scouts</h3>
+			<p class="mb-4">Ugley Village Hall, Cambridge Road, Ugley, Herts CM22 6HR.</p>
+			<p class="mb-4">
+			    <b>Beavers</b>
+			    <br/>
+			    Tuesday 1715-1815, during term
+			</p>
+			<p class="mb-4">
+			    <b>Cubs</b>
+			    <br/>
+			    Tuesday 1830-1945, during term
+			    <br/>
+			    Thursday 1800-1915, during term
+			</p>
+			<p class="mb-4">
+			    <b>Scouts</b>
+			    <br/>
+			    Wednesday 1900-2045, during term
+ 			</p>
+
+			<div class="flex flex-wrap gap-2 mb-4">
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beavers (6-8)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
+                        </div>
+			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
+                    </div>
+                    
+                    <!-- 1st Hallingbury -->
+                    <div id="hallingbury" class="bg-gray-50 p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Hallingburys Scout Group</h3>
+			<p class="mb-4">Little Hallingbury School, Green Lane, Little Hallingbury, Herts, CM22 7RE</p>
+			<p class="mb-4">
+			    <b>Beavers</b>
+			    <br/>
+			    Thursday
+			</p>
+			<p class="mb-4">
+			    <b>Cubs</b>
+			    <br/>
+			    Get in touch for meeting schedule
+			</p>
+			<p class="mb-4">
+			    <b>Scouts</b>
+			    <br/>
+			    Wednesday
+ 			</p>
+			<div class="flex flex-wrap gap-2 mb-4">
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beavers (6-8)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
+                        </div>
+			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
+                    </div>
+                    
+                    <!-- 1st Dunmow -->
+                    <div id="dunmow" class="bg-gray-50 p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Dunmow Scout Group</h3>
+			<p class="mb-4">Mill Lane, Essex, CM6 1BG</p>
+
+			<p class="mb-4">One of the oldest groups in the district with active sections and a vibrant program.</p>
+			<p class="mb-4">
+			    <b>Beavers</b>
+			    <br/>
+			    Monday 1715-1830, during term
+			    <br/>
+			    Tuesday 1700-1830, during term
+			</p>
+			<p class="mb-4">
+			    <b>Cubs</b>
+			    <br/>
+			    Thursday
+			    <br/>
+			    Wednesday 1800-2000, during term
+			</p>
+			<p class="mb-4">
+			    <b>Scouts</b>
+			    <br/>
+			    Friday 1900-2100, during term
+ 			</p>
+			<div class="flex flex-wrap gap-2 mb-4">
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beavers (6-8)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
+                        </div>
+			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
+                    </div>
+                    
+                    <!-- 1st Takeley -->
+                    <div id="takeley" class="bg-gray-50 p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Takeley Scout Group</h3>
+			<p class="mb-4">Dunmow Rd, Takeley, Bishop's Stortford CM22 6QJ</p>
+			<!--p class="mb-4">Known for our adventurous activities and strong community links.</p-->
+			<p class="mb-4">
+			    <b>Squirrels</b>
+			    <br/>
+			    Saturday, once a month
+			</p>
+			<p class="mb-4">
+			    <b>Beavers</b>
+			    <br/>
+			    Get in touch for meeting schedule.
+			</p>
+			<p class="mb-4">
+			    <b>Cubs</b>
+			    <br/>
+			    Thursday 1800-1930, during term
+			</p>
+			<p class="mb-4">
+			    <b>Scouts</b>
+			    <br/>
+			    Thursday 1930-2100, during term
+			</p>
+						
+			<div class="flex flex-wrap gap-2 mb-4">
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Squirrels (4-6)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beavers (6-8)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
+                        </div>
+			<a href="https://takeleyscouts.org.uk/" class="text-purple-600 hover:text-purple-800 font-medium">Go to site <i class="fas fa-external-link"></i></a>
+                    </div>
+                    
+                    <!-- 1st Stebbing -->
+                    <div id="stebbing" class="bg-gray-50 p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Stebbing Scout Group</h3>
+			<p class="mb-4">High Street, Stebbing, Essex, CM6 3SE</p>
+			<p class="mb-4">A small but active group with a focus on traditional scouting skills.</p>
+			<p class="mb-4">
+			    <b>Beavers</b>
+			    <br/>
+			    Thursday 1730-1830, during term
+			</p>
+			<p class="mb-4">
+			    <b>Cubs</b>
+			    <br/>
+			    Thursday 1845-2000, during term
+			</p>
+			<p class="mb-4">
+			    <b>Scouts</b>
+			    <br/>
+			    Get in touch for meeting schedule.
+			</p>
+			<div class="flex flex-wrap gap-2 mb-4">
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Beavers (6-8)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
+                        </div>
+			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
+                    </div>
+
+                    <!-- Centurion ESU -->
+                    <div id="centurionesu" class="flex flex-col md:flex-row-reverse bg-gray-50 p-6 rounded-lg shadow-md">
+			<div class="md:w-1/3 p-4 flex justify-center">
+                            <img src="/assets/img/centurionesu128x128.png" alt="Centurion ESU" class="group-logo rounded-full border-4 border-blue-800">
+			</div>
+			<div class="md:w-2/3 p-4">
+			    <h3 class="text-xl font-bold mb-3 scout-purple-text">Centurion ESU</h3>
+			    <p class="mb-4">Dunmow Rd, Takeley, Bishop's Stortford CM22 6QJ</p>
+			    <p class="mb-4">The district's Explorer Scout Unit (ESU) usually meets weekly at the 1<sup>st</sup> Takeley HQ.</p>
+			    <p class="mb-4">
+				<b>Explorers</b>
+				<br/>
+				Friday 1945-2145, during term
+			    </p>
+			    <div class="flex flex-wrap gap-2 mb-4">
+				<a href="https://centurions.uk/" class="text-purple-600 hover:text-purple-800 font-medium">Go to site <i class="fas fa-external-link"></i></a>
+			    </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+			        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Explorers (14-18)</span>
+			    </div>
+			</div>
+                    </div>
+		</div>
+            </div>
+	</section>
+
+	<!-- Events Section -->
+	<section id="events" class="py-16 bg-purple-50">
+            <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Upcoming Events</h2>
+		
+		<!-- Google Calendar Embed -->
+		<div class="bg-white p-4 rounded-lg shadow-md mb-12">
+                    <div class="responsive-iframe-container" style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
+			<iframe src="https://calendar.google.com/calendar/embed?src=c_b9f7b2e9d4c869a99ed9a6dfa4d4f86d1b91a96bade8b1a1890743b1ebbef8bd%40group.calendar.google.com&ctz=Europe%2FLondon" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" frameborder="0" scrolling="no"></iframe>
+                    </div>
+		    <p class="mb-4">
+			<span class="bg-red-100 text-white-800 px-3 py-1 rounded-full text-sm"><a href="https://calendar.google.com/calendar/u/6?cid=Y19iOWY3YjJlOWQ0Yzg2OWE5OWVkOWE2ZGZhNGQ0Zjg2ZDFiOTFhOTZiYWRlOGIxYTE4OTA3NDNiMWViYmVmOGJkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"><i class="fa-solid fa-calendar"></i>iCal</a></span>
+		</div>
+		
+		<!-- Featured Events -->
+		<div id="featuredEvents" class="grid md:grid-cols-3 gap-6">
+		</div>
+            </div>
+	</section>
+
+	<!-- News Section -->
+	<!-- section id="news" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Latest News</h2>
+		
+		<div id="featuredNews" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+		</div>
+		
+		<div class="text-center mt-10">
+                    <a href="/news/" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition">View All News</a>
+		</div>
+            </div>
+	</section-->
+
+	<!-- Gallery Section -->
+	<!-- section id="gallery" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Photo Gallery</h2>
+		
+		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts camping" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts hiking" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scout leaders" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1585435557343-3b348031e799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts around campfire" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1601758003257-23e0e1a0a3a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts cooking" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1601758003302-5b5a0e5a8b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts first aid" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1601758003302-5b5a0e5a8b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts knot tying" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+			<img src="https://images.unsplash.com/photo-1601758003302-5b5a0e5a8b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Scouts awards" class="w-full h-48 object-cover hover:scale-105 transition">
+                    </div>
+		</div>
+		
+		<div class="text-center mt-10">
+                    <a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition">View Full Gallery</a>
+		</div>
+            </div>
+	</section-->
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-16 bg-purple-700 text-white">
+            <div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12">Get Involved</h2>
+		
+		<div class="grid md:grid-cols-2 gap-12">
+                    <div>
+			<h3 class="text-2xl font-bold mb-6">Contact Us</h3>
+			<p class="mb-6">Interested in joining as a young person or volunteer? Get in touch with our district team.</p>
+			
+			<div class="space-y-4">
+                            <div class="flex items-start">
+				<i class="fas fa-envelope mt-1 mr-4"></i>
+				<div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p><a href="mailto:outreach@hatfieldforestscouts.org.uk">outreach@hatfieldforestscouts.org.uk</a></p>
+				</div>
+                            </div>
+                            <!-- div class="flex items-start">
+				<i class="fas fa-phone mt-1 mr-4"></i>
+				<div>
+                                    <h4 class="font-bold">Phone</h4>
+                                    <p>01279 123456</p>
+				</div>
+                            </div-->
+                            <div class="flex items-start">
+				<i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+				<div>
+                                    <h4 class="font-bold">District Headquarters</h4>
+                                    <p>Birchanger Scout Hut,<br>Birchanger, Essex, CM23 5QN</p>
+				</div>
+                            </div>
+			</div>
+                    </div>
+                    
+                    <div>
+			<h3 class="text-2xl font-bold mb-6">Contact Us</h3>
+			<form id="gform" class="space-y-4" action="https://docs.google.com/forms/u/6/d/e/1FAIpQLSevtDrZ3V7VCUrFmeGXgArzTEJTwDOYenom_V-vuiIUAIneUQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+                            <div>
+				<label for="name" class="block mb-1">Name</label>
+				<input type="text" id="name" name="entry.794179399" class="w-full px-4 py-2 rounded text-black">
+                            </div>
+                            <div>
+				<label for="email" class="block mb-1">Email</label>
+				<input type="email" id="email" name="entry.2009092502" class="w-full px-4 py-2 rounded text-black">
+                            </div>
+                            <div>
+				<label for="group" class="block mb-1">Preferred Group</label>
+				<select id="group" name="entry.304831117" class="w-full px-4 py-2 rounded text-black">
+                                    <option value="">Select a group</option>
+                                    <option value="birchanger">Birchanger</option>
+                                    <option value="stansted">1<sup>st</sup> Stansted</option>
+                                    <option value="henham">1<sup>st</sup> Henham &amp; Elsenham</option>
+                                    <option value="hallingbury">1<sup>st</sup> Hallingbury</option>
+                                    <option value="dunmow">1<sup>st</sup> Dunmow</option>
+                                    <option value="takeley">1<sup>st</sup> Takeley</option>
+                                    <option value="stebbing">1<sup>st</sup> Stebbing</option>
+                                    <option value="centurionesu">Centurion ESU</option>
+				</select>
+                            </div>
+                            <div>
+				<label for="message" class="block mb-1">Message</label>
+				<textarea id="message" name="entry.282461096" rows="4" class="w-full px-4 py-2 rounded text-black"></textarea>
+                            </div>
+                            <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full transition" onclick="gformsubmit();">Send Message</button>
+			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    </div>
+		</div>
+            </div>
+	</section>
+
+	<!-- Volunteer Section -->
+	<section class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+		<h2 class="text-3xl font-bold mb-6 scout-purple-text">Volunteer With Us</h2>
+		<p class="max-w-3xl mx-auto mb-8">Scouting is run by volunteers who make a difference in young people's lives. No experience is needed - we'll provide full training and support.</p>
+		<a href="https://www.scouts.org.uk/volunteer/" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition">Find out more about volunteering <i class="fas fa-external-link"></i></a>
+            </div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="scout-black text-white py-12">
+            <div class="container mx-auto px-4">
+		<div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+			<svg class="h-12 mb-4 fill-white" viewbox="0 0 20 20"><path d="M5.38,9.11a6.13,6.13,0,0,1,.91,2.43h1a7,7,0,0,0-1.07-3,3.6,3.6,0,0,0-3-1.86h0A2.93,2.93,0,0,0,.91,7.81,3,3,0,0,0,.3,10.39l1-.21a2.1,2.1,0,0,1,.42-1.76A1.92,1.92,0,0,1,3.2,7.7h0A2.73,2.73,0,0,1,5.38,9.11Z"></path><path d="M12.57,16a4.71,4.71,0,0,1-.79-1.78h-1a5.55,5.55,0,0,0,.82,2.1A4.18,4.18,0,0,1,10,17.77h0a4.17,4.17,0,0,1-1.59-1.45,5.55,5.55,0,0,0,.82-2.1h-1A4.71,4.71,0,0,1,7.44,16l-.17.23.12.26A5,5,0,0,0,9.8,18.77l.2.09h0l.2-.09a5,5,0,0,0,2.41-2.27l.12-.26Z"></path><path d="M14.62,9.11a6.13,6.13,0,0,0-.91,2.43h-1a7,7,0,0,1,1.07-3,3.6,3.6,0,0,1,3-1.86h0a2.93,2.93,0,0,1,2.28,1.09,3,3,0,0,1,.61,2.59l-1-.21a2.1,2.1,0,0,0-.42-1.76A1.92,1.92,0,0,0,16.8,7.7h0A2.73,2.73,0,0,0,14.62,9.11Z"></path><path d="M8.27,11.54h1a9.86,9.86,0,0,0-1-3A6.35,6.35,0,0,1,7.52,6,3.38,3.38,0,0,1,9,3.39c.16-.12.61-.46,1-.83.41.37.86.71,1,.83A3.38,3.38,0,0,1,12.48,6a6.36,6.36,0,0,1-.77,2.54,9.85,9.85,0,0,0-1,3h1a9.27,9.27,0,0,1,.88-2.61A7.06,7.06,0,0,0,13.46,6a4.37,4.37,0,0,0-1.86-3.37,11.42,11.42,0,0,1-1.25-1.07L10,1.15l-.36.39A11.41,11.41,0,0,1,8.39,2.61,4.37,4.37,0,0,0,6.54,6a7.06,7.06,0,0,0,.86,2.95A9.27,9.27,0,0,1,8.27,11.54Z"></path><rect x="4.35" y="12.41" width="11.3" height="0.94"></rect></svg>
+			<p>Hatfield Forest District Scouts provides scouting adventures to young people across our district.</p>
+                    </div>
+                    <div>
+			<h3 class="text-lg font-bold mb-4">Quick Links</h3>
+			<ul class="space-y-2">
+                            <li><a href="#home"    class="hover:text-yellow-300 transition">Home</a></li>
+                            <li><a href="#groups"  class="hover:text-yellow-300 transition">Groups</a></li>
+                            <li><a href="#events"  class="hover:text-yellow-300 transition">Events</a></li>
+                            <!-- li><a href="#news"    class="hover:text-yellow-300 transition">News</a></li-->
+                            <!-- li><a href="#gallery" class="hover:text-yellow-300 transition">Gallery</a></li-->
+			</ul>
+                    </div>
+                    <div>
+			<h3 class="text-lg font-bold mb-4">Sections</h3>
+			<ul class="space-y-2">
+                            <li><a href="https://www.scouts.org.uk/squirrels/" class="hover:text-yellow-300 transition">Squirrels (4-6)</a></li>
+                            <li><a href="https://www.scouts.org.uk/beavers/"   class="hover:text-yellow-300 transition">Beavers (6-8)</a></li>
+                            <li><a href="https://www.scouts.org.uk/cubs/"      class="hover:text-yellow-300 transition">Cubs (8-10½)</a></li>
+                            <li><a href="https://www.scouts.org.uk/scouts/"    class="hover:text-yellow-300 transition">Scouts (10½-14)</a></li>
+                            <li><a href="https://www.scouts.org.uk/explorers/" class="hover:text-yellow-300 transition">Explorers (14-18)</a></li>
+                            <li><a href="https://www.scouts.org.uk/network"    class="hover:text-yellow-300 transition">Network (18-25)</a></li>
+			</ul>
+                    </div>
+                    <div>
+			<h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+			<div class="flex space-x-4 mb-4">
+                            <a href="https://www.facebook.com/HatfieldForestScouts/" class="text-white hover:text-yellow-300 text-2xl"><i class="fab fa-facebook"></i></a>
+                            <!-- a href="#" class="text-white hover:text-yellow-300 text-2xl"><i class="fab fa-twitter"></i></a-->
+                            <a href="https://instagram.com/centurionsesu" class="text-white hover:text-yellow-300 text-2xl"><i class="fab fa-instagram"></i></a>
+			</div>
+			<p><a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5230088/charity-overview">Registered Charity No: 1205838</a></p>
+                    </div>
+		</div>
+		<div class="pt-8 border-t border-gray-700 text-center">
+                    <p>&copy; <span id="year">2025</span> Hatfield Forest District Scouts. All rights reserved. Website by <a href="https://psyphi.net">RMP</a></p>
+		</div>
+            </div>
+	</footer>
+
+	<script>
+	 document.getElementById('year').innerHTML = (new Date()).getYear()+1900;
+
+         // Mobile menu toggle
+         const mobileMenuButton = document.getElementById('mobile-menu-button');
+         const mobileMenu = document.getElementById('mobile-menu');
+         
+         mobileMenuButton.addEventListener('click', () => {
+             mobileMenu.classList.toggle('open');
+         });
+         
+         // Groups submenu toggle for mobile
+         const groupsToggle = document.getElementById('groups-toggle');
+         const groupsMenu = document.getElementById('groups-menu');
+         
+         groupsToggle.addEventListener('click', () => {
+             groupsMenu.classList.toggle('hidden');
+         });
+         
+         // Smooth scrolling for anchor links
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             anchor.addEventListener('click', function (e) {
+                 e.preventDefault();
+                 
+                 const targetId = this.getAttribute('href');
+                 if (targetId === '#') return;
+                 
+                 const targetElement = document.querySelector(targetId);
+		 
+                 if (targetElement) {
+		     let offset = $(targetId).offset().top - $('header').height();
+		     window.scrollTo({top: offset, behaviour: 'smooth'});
+                     
+                     // Close mobile menu if open
+                     if (mobileMenu.classList.contains('open')) {
+                         mobileMenu.classList.remove('open');
+                     }
+                 }
+             });
+         });
+
+	 if(document.location.protocol != "https:" && document.location.hostname != "localhost") {
+	     document.location.href="https://" + document.location.hostname + document.location.pathname;
+	 }
+
+	 let submitted = false;
+	 const gformsubmit = function(e) {
+	     $('#gform *').fadeOut(2000);
+	     $('#gform').prepend('Your submission has been processed...');
+	 };
+	</script>
+	<script src="/js/events.js"></script>
+	<script src="/js/news.js"></script>
     </body>
 </html>
