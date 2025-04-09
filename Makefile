@@ -9,7 +9,7 @@ build:
 	cp node_modules/js-yaml/dist/js-yaml.min.js dist/js/
 	cp node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js dist/js/
 	cp -pR node_modules/\@fortawesome/fontawesome-free/webfonts dist/
-	cp favicon.ico dist/
+	cp -pR favicon.ico icons dist/
 	cp -pR *.html js css assets dist/
 	npx @tailwindcss/cli -m -i css/style.css -o dist/css/style.css
 
