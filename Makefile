@@ -6,7 +6,7 @@ build:
 	cp node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js dist/js/
 	cp -pR node_modules/\@fortawesome/fontawesome-free/webfonts dist/
 	cp -pR favicon.ico icons dist/
-	cp -pR *.html js css assets dist/
+	cp -pR *.html ads.txt js css assets dist/
 	npx @tailwindcss/cli -m -i css/style.css -o dist/css/style.css
 
 all:
