@@ -1,4 +1,4 @@
-fetch('/assets/events.yml')
+fetch('/assets/events.yml?' + Math.random())
     .then(body => body.text())
     .then(text => {
 	const featuredEvents = document.getElementById('featuredEvents');

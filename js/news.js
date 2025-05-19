@@ -1,4 +1,4 @@
-fetch('/assets/news.yml')
+fetch('/assets/news.yml?' + Math.random())
     .then(body => body.text())
     .then(text => {
 	const featuredNews = document.getElementById('featuredNews');
