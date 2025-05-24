@@ -52,12 +52,12 @@ sub yaml2rdf {
 		managingEditor => $in->{managingEditor} || $in->{webmaster} || q[outreach@hatfieldforestdistrict.org.uk],
 		webMaster      => $in->{webmaster}      || q[outreach@hatfieldforestdistrict.org.uk],
 	       );
-  $rss->image(title       => 'freshmeat.net',
-	      url         => 'http://freshmeat.net/images/fm.mini.jpg',
-	      link        => 'http://freshmeat.net',
-	      width       => 88,
-	      height      => 31,
-	      description => 'This is the Freshmeat image stupid'
+  $rss->image(title       => 'Hatfield Forest District Scouts',
+	      url         => 'https://hatfieldforestdistrictscouts.org.uk/assets/squirrel500x500.png',
+	      link        => 'https://hatfieldforestdistrictscouts.org.uk/',
+	      width       => 500,
+	      height      => 500,
+	      description => 'Hatfield Forest District Squirrel'
 	     );
 
   for my $item (@{$yml}) {
