@@ -1,4 +1,7 @@
 #!/usr/bin/env perl
+#########
+# auto-rss news and events yaml files, pre-commit hook
+#
 use strict;
 use warnings;
 use YAML::XS qw(LoadFile);
