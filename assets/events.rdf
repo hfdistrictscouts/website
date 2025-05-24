@@ -10,28 +10,28 @@
 <description>Events and general goings-on from the home of Scouting in Hatfield Forest District, Essex, UK</description>
 <language>en</language>
 <copyright>Copyright 2025, Hatfield Forest District Scout Council</copyright>
-<pubDate>Sat, 24 May 2025 16:56:57 +0100</pubDate>
-<lastBuildDate>Sat, 24 May 2025 16:56:57 +0100</lastBuildDate>
-<managingEditor>outreach@hatfieldforestdistrict.org.uk</managingEditor>
-<webMaster>outreach@hatfieldforestdistrict.org.uk</webMaster>
+<pubDate>Sat, 24 May 2025 17:03:05 +0100</pubDate>
+<lastBuildDate>Sat, 24 May 2025 17:03:05 +0100</lastBuildDate>
+<managingEditor>outreach@hatfieldforestdistrict.org.uk (Outreach)</managingEditor>
+<webMaster>outreach@hatfieldforestdistrict.org.uk (Outreach)</webMaster>
 
 <image>
-<title>Hatfield Forest District Scouts</title>
+<title>Hatfield Forest District Events</title>
 <url>https://hatfieldforestdistrictscouts.org.uk/assets/squirrel500x500.png</url>
-<link>https://hatfieldforestdistrictscouts.org.uk/</link>
-<width>500</width>
-<height>500</height>
+<link>https://hatfieldforestdistrictscouts.org.uk/#events</link>
+<width>144</width>
+<height>144</height>
 <description>Hatfield Forest District Squirrel</description>
 </image>
 <item>
 <title>Saffron Walden Crank-Up</title>
 <description>Join our Support Team to help with our largest, district, annual fundraising event at Carver Barracks.</description>
-<guid isPermaLink="true">https://hatfieldforestdistrictscouts.org.uk/https://swcrankup.co.uk/</guid>
+<guid isPermaLink="true">https://hatfieldforestdistrictscouts.org.uk/+https://swcrankup.co.uk/</guid>
 </item>
 <item>
 <title>Peru Expedition</title>
 <description>Network expedition to Peru with Kent Scouts. Visiting Machu Picchu and Rainbow Mountain, and community work in the Amazon Basin.</description>
-<guid isPermaLink="true">https://hatfieldforestdistrictscouts.org.uk/https://www.kentscouts.org.uk/event-peru_2024.html</guid>
+<guid isPermaLink="true">https://hatfieldforestdistrictscouts.org.uk/+https://www.kentscouts.org.uk/event-peru_2024.html</guid>
 </item>
 </channel>
 </rss>
