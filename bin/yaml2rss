@@ -63,7 +63,7 @@ sub yaml2rdf {
   for my $item (@{$yml}) {
     my $uri = $item->{link};
     $uri    =~ s{^/}{}smx;
-    $uri    =~ s{ }{+}smxg;
+    $uri    =~ s{\s}{+}smxg;
     $rss->add_item(
 		   title => $item->{'title'},
 		   # creates a guid field with permaLink=true
