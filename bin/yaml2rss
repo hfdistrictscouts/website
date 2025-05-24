@@ -35,9 +35,9 @@ sub yaml2rdf {
   my $yml   = LoadFile($in->{file});
   my $base  = $in->{base} || q[https://hatfieldforestdistrictscouts.org.uk];
   my ($out) = $in->{file} =~ m{^(.*).ya?ml$}smix;
-  $out     .= q[.rss];
+  $out     .= q[.rdf];
 
-  my $rss = XML::RSS->new (version => '1.0');
+  my $rss = XML::RSS->new (version => '2.0');
 
   $rss->channel(
 		title          => $in->{title}       || q[Untitled Feed],
