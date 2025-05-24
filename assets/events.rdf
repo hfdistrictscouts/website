@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+ xmlns:blogChannel="http://backend.userland.com/blogChannelModule"
+>
+
+<channel>
+<title>Hatfield Forest District Events</title>
+<link>https://hatfieldforestdistrictscouts.org.uk/#events</link>
+<description>Events and general goings-on from the home of Scouting in Hatfield Forest District, Essex, UK</description>
+<language>en</language>
+<copyright>Copyright 2025, Hatfield Forest District Scout Council</copyright>
+<pubDate>Sat, 24 May 2025 16:50:53 +0100</pubDate>
+<lastBuildDate>Sat, 24 May 2025 16:50:53 +0100</lastBuildDate>
+<managingEditor>outreach@hatfieldforestdistrict.org.uk</managingEditor>
+<webMaster>outreach@hatfieldforestdistrict.org.uk</webMaster>
+
+<image>
+<title>freshmeat.net</title>
+<url>http://freshmeat.net/images/fm.mini.jpg</url>
+<link>http://freshmeat.net</link>
+<width>88</width>
+<height>31</height>
+<description>This is the Freshmeat image stupid</description>
+</image>
+<item>
+<title>Saffron Walden Crank-Up</title>
+<description>Join our Support Team to help with our largest, district, annual fundraising event at Carver Barracks.</description>
+<guid isPermaLink="true">https://hatfieldforestdistrictscouts.org.uk/https://swcrankup.co.uk/</guid>
+</item>
+<item>
+<title>Peru Expedition</title>
+<description>Network expedition to Peru with Kent Scouts. Visiting Machu Picchu and Rainbow Mountain, and community work in the Amazon Basin.</description>
+<guid isPermaLink="true">https://hatfieldforestdistrictscouts.org.uk/https://www.kentscouts.org.uk/event-peru_2024.html</guid>
+</item>
+</channel>
+</rss>

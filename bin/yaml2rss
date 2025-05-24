@@ -1,0 +1,78 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use YAML::XS qw(LoadFile);
+use XML::RSS;
+use POSIX qw(strftime);
+
+my $now_rfc822 = strftime q[%a, %d %b %Y %H:%M:%S %z], localtime time;
+my $year       = strftime q[%Y], localtime time;
+my $inputs     = [
+		  {
+		   file  => 'assets/news.yml',
+		   title => 'Hatfield Forest District News',
+		   link  => 'https://hatfieldforestdistrictscouts.org.uk/#news',
+		   description => 'News and stories from the home of Scouting in Hatfield Forest District, Essex, UK',
+		  },
+		  {
+		   file  => 'assets/events.yml',
+		   title => 'Hatfield Forest District Events',
+		   link  => 'https://hatfieldforestdistrictscouts.org.uk/#events',
+		   description => 'Events and general goings-on from the home of Scouting in Hatfield Forest District, Essex, UK',
+		  }
+		 ];
+
+for my $in (@{$inputs}) {
+  yaml2rdf($in);
+}
+
+
+sub yaml2rdf {
+  my $in    = shift;
+  my $yml   = LoadFile($in->{file});
+  my $base  = $in->{base} || q[https://hatfieldforestdistrictscouts.org.uk];
+  my ($out) = $in->{file} =~ m{^(.*).ya?ml$}smix;
+  $out     .= q[.rdf];
+
+  my $rss = XML::RSS->new (version => '2.0');
+
+  $rss->channel(
+		title          => $in->{title}       || q[Untitled Feed],
+		link           => $in->{link}        || q[],
+		language       => $in->{lang}        || 'en',
+		description    => $in->{description} || q[],
+#		rating         => '(PICS-1.1 "http://www.classify.org/safesurf/" 1 r (SS~~000 1))',
+		copyright      => $in->{copyright}   || (sprintf q[Copyright %d, Hatfield Forest District Scout Council], $year),
+		pubDate        => $now_rfc822,
+		lastBuildDate  => $now_rfc822,
+#		docs           => 'http://www.blahblah.org/fm.cdf',
+		managingEditor => $in->{managingEditor} || $in->{webmaster} || q[outreach@hatfieldforestdistrict.org.uk],
+		webMaster      => $in->{webmaster}      || q[outreach@hatfieldforestdistrict.org.uk],
+	       );
+  $rss->image(title       => 'freshmeat.net',
+	      url         => 'http://freshmeat.net/images/fm.mini.jpg',
+	      link        => 'http://freshmeat.net',
+	      width       => 88,
+	      height      => 31,
+	      description => 'This is the Freshmeat image stupid'
+	     );
+
+  for my $item (@{$yml}) {
+    my $uri = $item->{link};
+    $uri    =~ s{^/}{}smx;
+    $rss->add_item(
+		   title => $item->{'title'},
+		   # creates a guid field with permaLink=true
+		   permaLink  => (sprintf q[%s/%s], $base, $uri),
+		   # alternately creates a guid field with permaLink=false
+		   # guid     => "gtkeyboard-0.85"
+		   #		 enclosure   => {
+		   #				 #   url=>$url,
+		   #				 type=>"application/x-bittorrent"
+		   #				},
+		   description => $item->{text},
+		  );
+  }
+
+  $rss->save($out);
+}
