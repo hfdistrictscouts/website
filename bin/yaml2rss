@@ -7,6 +7,7 @@ use warnings;
 use YAML::XS qw(LoadFile);
 use XML::RSS;
 use POSIX qw(strftime);
+use CGI qw(escape_uri);
 
 my $now_rfc822 = strftime q[%a, %d %b %Y %H:%M:%S %z], localtime time;
 my $year       = strftime q[%Y], localtime time;
@@ -49,14 +50,14 @@ sub yaml2rdf {
 		pubDate        => $now_rfc822,
 		lastBuildDate  => $now_rfc822,
 #		docs           => 'http://www.blahblah.org/fm.cdf',
-		managingEditor => $in->{managingEditor} || $in->{webmaster} || q[outreach@hatfieldforestdistrict.org.uk],
-		webMaster      => $in->{webmaster}      || q[outreach@hatfieldforestdistrict.org.uk],
+		managingEditor => $in->{managingEditor} || $in->{webmaster} || q[outreach@hatfieldforestdistrict.org.uk (Outreach)],
+		webMaster      => $in->{webmaster}      || q[outreach@hatfieldforestdistrict.org.uk (Outreach)],
 	       );
-  $rss->image(title       => 'Hatfield Forest District Scouts',
+  $rss->image(title       => $in->{title} || q[],
 	      url         => 'https://hatfieldforestdistrictscouts.org.uk/assets/squirrel500x500.png',
-	      link        => 'https://hatfieldforestdistrictscouts.org.uk/',
-	      width       => 500,
-	      height      => 500,
+	      link        => $in->{link} || q[],
+	      width       => 144,
+	      height      => 144,
 	      description => 'Hatfield Forest District Squirrel'
 	     );
 
@@ -66,7 +67,7 @@ sub yaml2rdf {
     $rss->add_item(
 		   title => $item->{'title'},
 		   # creates a guid field with permaLink=true
-		   permaLink  => (sprintf q[%s/%s], $base, $uri),
+		   permaLink  => (sprintf q[%s/%s], $base, escape_uri($uri)),
 		   # alternately creates a guid field with permaLink=false
 		   # guid     => "gtkeyboard-0.85"
 		   #		 enclosure   => {
