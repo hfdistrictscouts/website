@@ -61,13 +61,13 @@ sub yaml2rdf {
 	     );
 
   for my $item (@{$yml}) {
-    my $uri = $item->{link};
+    my $uri = $item->{link} || q[];
     $uri    =~ s{^/}{}smx;
     $uri    =~ s{\s}{+}smxg;
     $rss->add_item(
 		   title => $item->{'title'},
 		   # creates a guid field with permaLink=true
-		   permaLink  => (sprintf q[%s/%s], $base, $uri),
+		   ($uri ? (permaLink  => (sprintf q[%s/%s], $base, $uri)) : ()),
 		   # alternately creates a guid field with permaLink=false
 		   # guid     => "gtkeyboard-0.85"
 		   #		 enclosure   => {
