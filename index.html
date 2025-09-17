@@ -545,6 +545,7 @@
                                     <option value="takeley">1<sup>st</sup> Takeley</option>
                                     <option value="stebbing">1<sup>st</sup> Stebbing</option>
                                     <option value="centurionesu">Centurion ESU</option>
+				    <option value="trap">Trap for spambots</option>
 				</select>
                             </div>
                             <div>
@@ -663,7 +664,15 @@
 	 const gformsubmit = function(e) {
 	     $('#gform *').fadeOut(2000);
 	     $('#gform').prepend('Your submission has been processed...');
+
+	     const group = document.getElementById('group').value;
+	     if(group === 'trap') {
+		 e.preventDefault();
+	     }
 	 };
+
+	 $('#group option').last().css({display:"none"}); // regular spambot seems to select the last option
+
 	</script>
 	<script src="/js/events.js"></script>
 	<script src="/js/news.js"></script>
