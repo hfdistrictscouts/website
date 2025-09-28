@@ -10,6 +10,11 @@ build:
 	cp -pR *.html ads.txt js css assets dist/
 	npx @tailwindcss/cli -m -i css/style.css -o dist/css/style.css
 
+rss:
+	yq . assets/news.yml   > /dev/null || exit 1
+	yq . assets/events.yml > /dev/null || exit 1
+	./bin/yaml2rss
+
 all:
 	$(MAKE) prep
 	$(MAKE) build
