@@ -665,8 +665,15 @@
 	     $('#gform *').fadeOut(2000);
 	     $('#gform').prepend('Your submission has been processed...');
 
-	     const group = document.getElementById('group').value;
-	     if(group === 'trap') {
+	     const group   = document.getElementById('group').value;
+	     const name    = document.getElementById('name').value;
+	     const message = document.getElementById('message').value;
+
+	     if(
+		 group === 'trap'
+		 || name.match(/\s+BTC/)
+		 || message.match(/\s+BTC/)
+	     ) {
 		 e.preventDefault();
 	     }
 	 };
