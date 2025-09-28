@@ -671,8 +671,8 @@
 
 	     if(
 		 group === 'trap'
-		 || name.match(/\s+BTC/)
-		 || message.match(/\s+BTC/)
+		 || name.match(/\s+(BTC|Bitcoin)/i)
+		 || message.match(/\s+(BTC|Bitcoin)/i)
 	     ) {
 		 e.preventDefault();
 	     }
