@@ -312,6 +312,7 @@
 	     
 	     // Close on background click or close button
 	     $('#photoModal').on('click', function(e) {
+		 $('body').css('overflow', '');
 		 if (e.target === this || $(e.target).is('button')) {
 		     $(this).fadeOut(200, function() {
 			 $(this).remove();
@@ -322,6 +323,7 @@
 	     // Close on ESC key
 	     $(document).on('keydown.photoModal', function(e) {
 		 if (e.key === 'Escape') {
+		     $('body').css('overflow', '');
 		     $('#photoModal').fadeOut(200, function() {
 			 $(this).remove();
 			 $(document).off('keydown.photoModal');
@@ -331,9 +333,6 @@
 	     
 	     // Prevent body scroll
 	     $('body').css('overflow', 'hidden');
-	     $('#photoModal').on('remove', function() {
-		 $('body').css('overflow', '');
-	     });
 	 }
 
 	 // Demo: Click any image to open modal
