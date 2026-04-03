@@ -1,0 +1,35 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use HTML::LinkExtor;
+use File::Find;
+use LWP::UserAgent;
+
+my $p  = HTML::LinkExtor->new(\&cb, "https://hatfieldforestdistrictscouts.org.uk/");
+my $ua = LWP::UserAgent->new();
+
+sub cb {
+  my($tag, %links) = @_;
+
+  for my $attr (keys %links) {
+    my $link = $links{$attr};
+    if(ref $link ne 'URI::https') {
+      next;
+    }
+
+    my $res = $ua->head( $link );
+    printf "%s $File::Find::name %s\n", ($res->is_success ? "PASS" : "FAIL"), $link||q[];
+  }
+}
+
+sub wanted {
+
+  if($File::Find::dir =~ /(?:node_modules|dist)$/smx) {
+    return;
+  }
+  
+  $p->parse_file($File::Find::name);
+}
+
+
+find(\&wanted, q[.]);
