@@ -10,7 +10,7 @@ fetch('/assets/news.yml?' + Math.random())
 	doc.forEach(item => {
 	    let div=document.createElement('div');
 	    div.className="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100";
-	    let img=item.img || "https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+	    let img=item.img || "/assets/photo-1539017058502-e1879b961419.jpg";
 	    let imgAlt = item.imgAlt || "News Item";
 	    let content = `
 <img src="${img}" alt="${imgAlt}" class="w-full h-48 object-cover">
