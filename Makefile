@@ -1,3 +1,5 @@
+OS := $(shell uname -s)
+
 build:
 	rm -rf dist
 	mkdir -p dist/js dist/css
@@ -14,7 +16,12 @@ build:
 docker:
 	docker build -t hfdistrictwebsite .
 
-rss:
+rss: rss_$(OS)
+
+rss_Darwin: docker
+	docker run -i --rm -v $$(pwd):$$(pwd) -w $$(pwd) hfdistrictwebsite make rss
+
+rss_Linux:
 	yq . assets/news.yml   > /dev/null || exit 1
 	yq . assets/events.yml > /dev/null || exit 1
 	./bin/yaml2rss
