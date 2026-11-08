@@ -5,10 +5,14 @@ build:
 	cp node_modules/js-yaml/dist/js-yaml.min.js                         dist/js/
 	cp node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js dist/js/
 	cp node_modules/@lottiefiles/lottie-player/dist/lottie-player.js    dist/js/
+	cp node_modules/necker/necker.js                                    dist/js/
 	cp -pR node_modules/\@fortawesome/fontawesome-free/webfonts         dist/
 	cp -pR favicon.ico icons dist/
 	cp -pR *.html ads.txt js css assets dist/
 	npx @tailwindcss/cli -m -i css/style.css -o dist/css/style.css
+
+docker:
+	docker build -t hfdistrictwebsite .
 
 rss:
 	yq . assets/news.yml   > /dev/null || exit 1

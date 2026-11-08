@@ -21,6 +21,7 @@
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/js-yaml.min.js"></script>
 	<script src="/js/lottie-player.js"></script>
+	<script src="/js/necker.js"></script>
 
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="apple-touch-icon" sizes="144x144" href="/icons/ipad-retina.png" />
@@ -48,7 +49,6 @@
                             Groups <i class="fas fa-chevron-down ml-1 text-xs"></i>
 			</button>
 			<div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
-                            <a href="#birchanger"   class="block px-4 py-2 hover:bg-purple-100">Birchanger</a>
                             <a href="#stansted"     class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stansted</a>
                             <a href="#henham"       class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Henham &amp; Elsenham</a>
                             <!--a href="#hallingbury"  class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Hallingbury</a-->
@@ -56,6 +56,7 @@
                             <a href="#dunmow"       class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Dunmow</a>
                             <a href="#takeley"      class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Takeley</a>
                             <a href="#stebbing"     class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Stebbing</a>
+                            <a href="#birchanger"   class="block px-4 py-2 hover:bg-purple-100">1<sup>st</sup> Birchanger</a>
                             <a href="#centurionesu" class="block px-4 py-2 hover:bg-purple-100">Centurion ESU</a>
 			</div>
                     </div>
@@ -80,7 +81,6 @@
                             Groups <i class="fas fa-chevron-down ml-1 text-xs"></i>
 			</button>
 			<div id="groups-menu" class="pl-4 hidden">
-                            <a href="#birchanger"   class="block py-2 hover:text-yellow-300 transition">Birchanger</a>
                             <a href="#stansted"     class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stansted</a>
                             <a href="#henham"       class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Henham &amp; Elsenham</a>
                             <!--a href="#hallingbury"  class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Hallingbury</a-->
@@ -88,6 +88,7 @@
                             <a href="#dunmow"       class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Dunmow</a>
                             <a href="#takeley"      class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Takeley</a>
                             <a href="#stebbing"     class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Stebbing</a>
+                            <a href="#birchanger"   class="block py-2 hover:text-yellow-300 transition">1<sup>st</sup> Birchanger</a>
                             <a href="#centurionesu" class="block py-2 hover:text-yellow-300 transition">Centurion ESU</a>
 			</div>
                     </div>
@@ -148,7 +149,7 @@
 		<h2 class="text-3xl font-bold text-center mb-12 scout-purple-text">Our Scout Groups</h2>
 		
 		<!-- Birchanger -->
-		<div id="birchanger" class="mb-16">
+		<!-- div id="birchanger" class="mb-16">
                     <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg overflow-hidden shadow-md">
 			<div class="md:w-1/3 p-6 flex justify-center">
                             <img src="/assets/img/fleur128x128.png" alt="Birchanger Scouts" class="group-logo rounded-full border-4 border-purple-500">
@@ -162,10 +163,10 @@
 				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Support</span>
 				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Leader Training</span>
                             </div>
-                            <!--a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">Learn More</a-->
+                            <a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">Learn More</a>
 			</div>
                     </div>
-		</div>
+		</div-->
 		
 		<!-- 1st Stansted -->
 		<div class="mb-16">
@@ -199,6 +200,9 @@
 				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
 				<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
                             </div>
+			    <div>
+				<scout-scarf view="rolled" main-color="red" outer-band="black" outer-band-width="wide" style="width:400px"></scout-scarf>
+			    </div>
                             <!-- a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">Learn More</a-->
 			</div>
                     </div>
@@ -232,6 +236,9 @@
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
                         </div>
+			<div>
+			    <scout-scarf view="rolled" main-color="goldenrod" outer-band="red" outer-band-width="wide" style="width:400px"></scout-scarf>
+			</div>
 			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
                     </div>
                     
@@ -313,6 +320,9 @@
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
                         </div>
+			<div>
+			    <scout-scarf view="rolled" main-color="forestgreen" outer-band="forestgreen" style="width:400px"></scout-scarf>
+			</div>
 			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
                     </div>
                     
@@ -350,8 +360,13 @@
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
                         </div>
+
+			<div>
+			    <scout-scarf view="rolled" main-color="navy" outer-band="white" outer-band-width="wide" style="width:400px"></scout-scarf>
+			</div>
+
                     </div>
-                    
+
                     <!-- 1st Stebbing -->
                     <div id="stebbing" class="bg-gray-50 p-6 rounded-lg shadow-md">
 			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Stebbing Scout Group</h3>
@@ -377,8 +392,37 @@
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
 			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Scouts (10½-14)</span>
                         </div>
+			<div>
+			    <scout-scarf view="rolled" main-color="hotpink" inner-band="navy" inner-band-width="wide" outer-band="white" outer-band-width="wide" style="width:400px"></scout-scarf>
+			</div>
 			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
                     </div>
+
+                    <!-- 1st Birchanger -->
+                    <div id="birchanger" class="bg-gray-50 p-6 rounded-lg shadow-md">
+			<h3 class="text-xl font-bold mb-3 scout-purple-text">1<sup>st</sup> Birchanger Scout Group</h3>
+			<p class="mb-4">Wood Lane, Birchanger, Bishop's Stortford CM23 5QN</p>
+			<p class="mb-4">A small but active group with a focus on traditional scouting skills.</p>
+			<p class="mb-4">
+			    <b>Squirrels</b>
+			    <br/>
+			    Saturday 0830-0930
+			</p -->
+			<p class="mb-4">
+			    <b>Cubs</b>
+			    <br/>
+			    Tuesday 1830-2000
+			</p>
+			<div class="flex flex-wrap gap-2 mb-4">
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Squirrels (4-6)</span>
+			    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cubs (8-10½)</span>
+                        </div>
+			<div>
+			    <scout-scarf view="rolled" main-color="goldenrod" inner-band="red" inner-band-width="wide" outer-band="forestgreen" outer-band-width="wide" style="width:400px"></scout-scarf>
+			</div>
+			<!--a href="#" class="text-purple-600 hover:text-purple-800 font-medium">View details →</a-->
+                    </div>
+
 		</div>
 
 		<div class="mb-16">
@@ -403,6 +447,10 @@
 			        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Explorers (14-18)</span>
 			    </div>
 			</div>
+			<div>
+			    <scout-scarf view="rolled" main-color="black" outer-band="goldenrod" outer-band-width="wide" style="width:400px"></scout-scarf>
+			</div>
+
                     </div>
 		</div>
             </div>
@@ -537,13 +585,13 @@
 				<label for="group" class="block mb-1">Preferred Group</label>
 				<select id="group" name="entry.304831117" class="w-full px-4 py-2 rounded text-black">
                                     <option value="">Select a group</option>
-                                    <option value="birchanger">Birchanger</option>
                                     <option value="stansted">1<sup>st</sup> Stansted</option>
                                     <option value="henham">1<sup>st</sup> Henham &amp; Elsenham</option>
                                     <!--option value="hallingbury">1<sup>st</sup> Hallingbury</option-->
                                     <option value="dunmow">1<sup>st</sup> Dunmow</option>
                                     <option value="takeley">1<sup>st</sup> Takeley</option>
                                     <option value="stebbing">1<sup>st</sup> Stebbing</option>
+                                    <option value="birchanger">Birchanger</option>
                                     <option value="centurionesu">Centurion ESU</option>
 				    <option value="trap">Trap for spambots</option>
 				</select>
