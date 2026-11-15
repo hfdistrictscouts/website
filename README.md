@@ -1,7 +1,7 @@
 This repository manages the website for https://hatfieldforestdistrictscouts.org.uk/
 
-News items go in /assets/news.yml (currently disabled)
-Event items go in /assets/events.yml
+News items go in /assets/news.yml
+Event items go in /assets/events.yml (currently disabled)
 
 Section meeting times were scraped manually from scouts.org.uk group finder and will need correcting in both places if/when necessary.
 
